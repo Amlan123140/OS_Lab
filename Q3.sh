@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -n "Enter source base: "
 read x
 echo -n "Enter number: "
