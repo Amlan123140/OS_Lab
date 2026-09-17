@@ -3,19 +3,37 @@
 echo "Enter string: "
 read str
 
+rev=""
 i=0
-j=$((${#str} - 1))
 
-while [ $i -lt $j ]
+while [ $i -lt ${#str} ]
 do
-    if [ "${str:$i:1}" != "${str:$j:1}" ]
-    then
-        echo "Not Palindrome"
-        exit
-    fi
-
+    rev="${str:$i:1}$rev"
     i=$((i + 1))
-    j=$((j - 1))
 done
 
-echo "Palindrome"
+if [ "$str" = "$rev" ]
+then
+    echo "Palindrome"
+else
+    echo "Not Palindrome"
+fi#!/bin/bash
+
+echo "Enter string: "
+read str
+
+rev=""
+i=0
+
+while [ $i -lt ${#str} ]
+do
+    rev="${str:$i:1}$rev"
+    i=$((i + 1))
+done
+
+if [ "$str" = "$rev" ]
+then
+    echo "Palindrome"
+else
+    echo "Not Palindrome"
+fi
