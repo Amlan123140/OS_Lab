@@ -1,6 +1,6 @@
-echo "Enter source base: "
+echo -n "Enter source base: "
 read x
-echo "Enter number: "
+echo -n "Enter number: "
 read n
 decimal=0
 power=1
@@ -13,7 +13,7 @@ do
 	n=$((n / 10))
 done
 
-echo "Target base: "
+echo -n "Target base: "
 read u
 result=()
 i=0
@@ -25,8 +25,10 @@ do
 	decimal=$((decimal / u))
 
 done
+echo -n "Equivalent value: "
 while [ $i -gt 0 ]
 do
 	i=$((i-1))
 	echo -n "${result[i]}"
 done
+echo
